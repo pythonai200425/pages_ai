@@ -57,7 +57,7 @@ This dataset represents the relationship between **daily weightlifting load in k
 12. In PolynomialFeatures (degreee=2)- the first feature is always 1, so why do we need it?  
 
 **Bonus**:  
-try solving the curved parabola with LinearRegression and check the R². how much it proved when using **Polynomial Regression** (degree=2)?
+Try solving the curved parabola with LinearRegression and check the R². how much it proved when using **Polynomial Regression** (degree=2)?
 
 
 ## 📤 הגשה
