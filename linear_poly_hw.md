@@ -50,11 +50,11 @@ This dataset represents the relationship between **daily weightlifting load in k
 7. **Predict** (using model.predict) the value of 4.5 hours in the first model, and 0.5 load-kg in the second model
 
 ### Theoretical Questions — Test Your Understanding (Bonus)  💡
-8. 🧾 What’s the difference between model.score and the r2_score function?  
-9. 🎯 Why do we need to calculate Adjusted R² instead of just relying on R²? 
-A. 🌀 In the parabola function aX² + bX + c, explain how each parameter (a, b, c) affects the shape and position of the parabola  
-B. 🧮 Considering your previous answer, why does PolynomialFeatures create 3 features?  
-C. 🧱 In PolynomialFeatures(degree = 2), the first feature is always 1 — why do we need it?  
+8.  🧾 What’s the difference between model.score and the r2_score function?  
+9.  🎯 Why do we need to calculate Adjusted R² instead of just relying on R²?  
+10. 🌀 In the parabola function aX² + bX + c, explain how each parameter (a, b, c) affects the shape and position of the parabola  
+11. 🧮 Considering your previous answer, why does PolynomialFeatures create 3 features?  
+12. 🧱 In PolynomialFeatures(degree = 2), the first feature is always 1 — why do we need it?  
 
 **Bonus**:  
 Try solving the curved parabola with LinearRegression and check the R². how much it proved when using **Polynomial Regression** (degree=2)?
