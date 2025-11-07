@@ -51,7 +51,7 @@ This dataset represents the relationship between **daily weightlifting load in k
 
 ### Theoretical Questions — Test Your Understanding (Bonus)  💡
 8. 🧾 What’s the difference between model.score and the r2_score function?  
-9. 🎯 Why do we need to calculate Adjusted R² instead of just relying on R²?  
+9. 🎯 Why do we need to calculate Adjusted R² instead of just relying on R²? 
 A. 🌀 In the parabola function aX² + bX + c, explain how each parameter (a, b, c) affects the shape and position of the parabola  
 B. 🧮 Considering your previous answer, why does PolynomialFeatures create 3 features?  
 C. 🧱 In PolynomialFeatures(degree = 2), the first feature is always 1 — why do we need it?  
