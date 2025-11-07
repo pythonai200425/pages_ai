@@ -49,6 +49,13 @@ This dataset represents the relationship between **daily weightlifting load in k
 6. 📈 **Draw** the graph of the regression parabola + observation points for the **Polynoial Regression**  
 7. **Predict** (using model.predict) the value of 4.5 hours in the first model, and 0.5 load-kg in the second model
 
+### theoretical questions -- Bonus
+8. What is the diff between model.score and r2_score function?
+9. Why do we need to calc Adj R²? why nor just R²?  
+10. Exaplin in parabola function aX² + bX + c => how does the a,b,c affects the shape of the parabola?
+11. Considering your answer to previous question (10)- why does PolynomialFeatures creates 3 features?  
+12. in PolynomialFeatures (degreee=2)- the first feature is always 1, so why do we need it?  
+
 **Bonus**: try solving the curved parabola with LinearRegression and check the R². how much it proved when using **Polynomial Regression** (degree=2)?
 
 
