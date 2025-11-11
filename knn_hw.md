@@ -1,4 +1,4 @@
-# 🧮 Exercise: Finding Nearest Neighbors (k = 3)
+# 🧮 Exercise: Finding Nearest Neighbors 
 
 We have a small dataset showing a relationship between X (the feature) and Y (the target value).  
 Your goal is to find, for each point, its 3 closest neighbors based on X — and then calculate the **average Y** of those neighbors.  
