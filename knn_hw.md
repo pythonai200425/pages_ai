@@ -36,7 +36,7 @@ After that, you’ll compare how close this average is to the real Y of the poin
 3. After you have all the averages, calculate **MSE**, which is how far (on average) your predicted Y values are from the real Y values  
    This gives a simple idea of **how well the neighborhood method works**
 
-4. *Bonus: can you do it in a loop from k=3 to k=7 and find the best MSE?
+4. *Bonus: can you do it in a loop from k=3 to k=7 and find the k with the best MSE?
 
 ## 📤 הגשה
 
