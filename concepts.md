@@ -8,3 +8,5 @@
 ## KNN
 ## Elbow
 ## overfit, underfit
+## Sigmoid
+## Decision Boundary
