@@ -8,6 +8,7 @@
 ## KNN
 ## Elbow
 ## overfit, underfit
+## logistic regression
 ## Sigmoid
 ## Decision Boundary
 ## e
