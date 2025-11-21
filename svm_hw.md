@@ -4,53 +4,51 @@ We work in 4-dimensional space with features (x_1, x_2, x_3, x_4)
 
 The separating hyperplane (decision surface) is:
 
-[ 2x_1 - x_2 + x_3 + x_4 - 4 = 0 ]
+$$2x_1 - x_2 + x_3 + x_4 - 4 = 0$$
 
 That is, the weight vector and bias are:
 
-[ w = (2, -1, 1, 1),  b = -4 ]
+$$w = (2, -1, 1, 1),\quad b = -4$$
 
----
 
 ## Tasks
 
 Given a hyperplane in **n-dimensional space**:
 
-[ w_1 x_1 + w_2 x_2 + \dots + w_n x_n + b = 0 ]
+$$w_1 x_1 + w_2 x_2 + \dots + w_n x_n + b = 0$$
 
 and a point:
 
-[ x = (x_1, x_2, \dots, x_n) ]
+$$x = (x_1, x_2, \dots, x_n)$$
 
 ### 1. Absolute Distance Formula
 
-[ Distance(x) = | w ⋅ x + b | / sqrt(w_1^2 + w_2^2 + \dots + w_n^2) ]
+$$\text{Distance}(x) = \frac{|\mathbf{w} \cdot \mathbf{x} + b|}{\sqrt{w_1^2 + w_2^2 + \dots + w_n^2}}$$
 
 ### 2. Signed Distance Formula
 
-[ SignedDistance(x) = ( w ⋅ x + b ) / sqrt(w_1^2 + w_2^2 + \dots + w_n^2) ]
+$$\text{SignedDistance}(x) = \frac{\mathbf{w} \cdot \mathbf{x} + b}{\sqrt{w_1^2 + w_2^2 + \dots + w_n^2}}$$
 
----
 
 ## Example for Your Hyperplane
 
 Given the plane:
 
-[ 2x_1 - x_2 + x_3 + x_4 - 4 = 0 ]
+$$2x_1 - x_2 + x_3 + x_4 - 4 = 0$$
 
 Its weight vector is:
 
-[ w = (2, -1, 1, 1) ]
+$$w = (2, -1, 1, 1)$$
 
 So the denominator is:
 
-[ sqrt(2^2 + (-1)^2 + 1^2 + 1^2) = sqrt(7) ]
+$$\sqrt{2^2 + (-1)^2 + 1^2 + 1^2} = \sqrt{7}$$
 
 Final formulas:
 
-[ Distance(x) = |2x_1 - x_2 + x_3 + x_4 - 4| / sqrt(7) ]
+$$\text{Distance}(x) = \frac{|2x_1 - x_2 + x_3 + x_4 - 4|}{\sqrt{7}}$$
 
-[ SignedDistance(x) = (2x_1 - x_2 + x_3 + x_4 - 4) / sqrt(7) ]
+$$\text{SignedDistance}(x) = \frac{2x_1 - x_2 + x_3 + x_4 - 4}{\sqrt{7}}$$
 
 ---
 
