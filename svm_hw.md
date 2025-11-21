@@ -75,7 +75,7 @@ Since $2x_1 - x_2 + x_3 + x_4 - 4 = -1 < 0$, $P_3$ is **below** the hyperplane.
 
 ---
 
-## Given Points in R^4
+## Given Points in $$\mathbb{R}^4$$
 
 - $$P_1$$ = (0, 0, 0, 0)
 - $$P_2$$ = (2, 0, 0, 0)
@@ -99,7 +99,7 @@ Since $2x_1 - x_2 + x_3 + x_4 - 4 = -1 < 0$, $P_3$ is **below** the hyperplane.
 ```python
 import numpy as np
 
-# 10 points in R^4: [x1, x2, x3, x4]
+# 10 points in $$\mathbb{R}^4$$: [x1, x2, x3, x4]
 points = np.array([
     [0, 0, 0, 0],   # P1
     [2, 0, 0, 0],   # P2
