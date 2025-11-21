@@ -52,6 +52,30 @@ $$\text{SignedDistance}(x) = \frac{2x_1 - x_2 + x_3 + x_4 - 4}{\sqrt{7}}$$
 
 ---
 
+### Example Calculation for a Point
+
+Let’s use $P_1 = (0, 0, 0, 0)$:
+
+Plug into the formula:
+
+$$
+2x_1 - x_2 + x_3 + x_4 - 4 = 2 \times 0 - 0 + 0 + 0 - 4 = -4
+$$
+
+So,
+
+$$
+	ext{Distance}(P_1) = \frac{|-4|}{\sqrt{7}} = \frac{4}{\sqrt{7}} \approx 1.512
+$$
+
+$$
+	ext{SignedDistance}(P_1) = \frac{-4}{\sqrt{7}} \approx -1.512
+$$
+
+Since $2x_1 - x_2 + x_3 + x_4 - 4 = -4 < 0$, $P_1$ is **below** the hyperplane.
+
+---
+
 ## Given Points in R^4
 
 - P1 = (0, 0, 0, 0)
