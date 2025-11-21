@@ -8,15 +8,16 @@ The separating hyperplane (decision surface) is:
 2x_1 - x_2 + x_3 + x_4 - 4 = 0
 \]
 
-That is, the weight vector and bias are
+That is, the weight vector and bias are:
 
 \[
-\mathbf{w} = (2,\,-1,\,+1,\,+1), \quad b = -4
+\mathbf{w} = (2, -1, 1, 1), \quad b = -4
 \]
 
 ---
 
 ## Tasks
+
 Given a hyperplane in **n-dimensional space**:
 
 \[
@@ -29,15 +30,13 @@ and a point:
 \mathbf{x} = (x_1, x_2, \dots, x_n)
 \]
 
-
 ### 1. Absolute Distance Formula
 
 \[
 \text{Distance}(\mathbf{x}) =
-\frac{\left|\,\mathbf{w} \cdot \mathbf{x} + b\,\right|}
+\frac{|\mathbf{w} \cdot \mathbf{x} + b|}
 {\sqrt{w_1^2 + w_2^2 + \dots + w_n^2}}
 \]
-
 
 ### 2. Signed Distance Formula
 
@@ -47,8 +46,9 @@ and a point:
 {\sqrt{w_1^2 + w_2^2 + \dots + w_n^2}}
 \]
 
+---
 
- **Example for Your Hyperplane**
+## Example for Your Hyperplane
 
 Given the plane:
 
@@ -72,7 +72,7 @@ Final formulas:
 
 \[
 \text{Distance}(\mathbf{x}) =
-\frac{\left|\,2x_1 - x_2 + x_3 + x_4 - 4\,\right|}
+\frac{|2x_1 - x_2 + x_3 + x_4 - 4|}
 {\sqrt{7}}
 \]
 
@@ -81,9 +81,10 @@ Final formulas:
 \frac{2x_1 - x_2 + x_3 + x_4 - 4}
 {\sqrt{7}}
 \]
+
 ---
 
-We are given the following 10 points:
+## Given Points in \(\mathbb{R}^4\)
 
 - \(P_1 = (0, 0, 0, 0)\)
 - \(P_2 = (2, 0, 0, 0)\)
@@ -95,6 +96,8 @@ We are given the following 10 points:
 - \(P_8 = (2, 1, 0, 3)\)
 - \(P_9 = (0, -1, 0, 3)\)
 - \(P_{10} = (3, 2, 1, 0)\)
+
+---
 
 ## Starter NumPy Code
 
@@ -116,6 +119,10 @@ points = np.array([
 ], dtype=float)
 
 # Hyperplane parameters: 2x1 - x2 + x3 + x4 - 4 = 0
+w = np.array([2, -1, 1, 1], dtype=float)
 b = -4.0
 
 # From here you can compute:
+# g(x) = w @ x + b
+# abs_distance = np.abs(g(x)) / np.linalg.norm(w)
+# signed_distance = g(x) / np.linalg.norm(w)
