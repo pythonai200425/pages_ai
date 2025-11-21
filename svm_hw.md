@@ -50,29 +50,28 @@ $$\text{Distance}(x) = \frac{|2x_1 - x_2 + x_3 + x_4 - 4|}{\sqrt{7}}$$
 
 $$\text{SignedDistance}(x) = \frac{2x_1 - x_2 + x_3 + x_4 - 4}{\sqrt{7}}$$
 
----
+**Example Calculation for a Point**
 
-### Example Calculation for a Point
 
-Let’s use $P_1 = (0, 0, 0, 0)$:
+Let’s use $P_3 = (1, 1, 1, 1)$:
 
 Plug into the formula:
 
 $$
-2x_1 - x_2 + x_3 + x_4 - 4 = 2 \times 0 - 0 + 0 + 0 - 4 = -4
+2x_1 - x_2 + x_3 + x_4 - 4 = 2 \times 1 - 1 + 1 + 1 - 4 = 2 - 1 + 1 + 1 - 4 = -1
 $$
 
 So,
 
 $$
-	ext{Distance}(P_1) = \frac{|-4|}{\sqrt{7}} = \frac{4}{\sqrt{7}} \approx 1.512
+	ext{Distance}(P_3) = \frac{|-1|}{\sqrt{7}} = \frac{1}{\sqrt{7}} \approx 0.378
 $$
 
 $$
-	ext{SignedDistance}(P_1) = \frac{-4}{\sqrt{7}} \approx -1.512
+	ext{SignedDistance}(P_3) = \frac{-1}{\sqrt{7}} \approx -0.378
 $$
 
-Since $2x_1 - x_2 + x_3 + x_4 - 4 = -4 < 0$, $P_1$ is **below** the hyperplane.
+Since $2x_1 - x_2 + x_3 + x_4 - 4 = -1 < 0$, $P_3$ is **below** the hyperplane.
 
 ---
 
