@@ -17,7 +17,7 @@ We have a small dataset of apples and bananas with two numeric features: size an
 |     9 | Banana | 7.5       | 125       |
 |    10 | Banana | 6.5       | 118       |
 
-<img src="images/svm_hw.jpg" />
+<img src="images/svm_hw.jpg" style="width: 50%" />
 
 ## Starter Python Code
 
