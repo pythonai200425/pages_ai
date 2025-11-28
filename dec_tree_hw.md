@@ -1,6 +1,6 @@
 # Decision Tree Classification – Animals
 
-<img src="images/cat_or_dog.jpg" width="40%"/>
+<img src="images/cat_or_dog.jpg" width="55%"/>
 
 <br />
 
@@ -23,7 +23,7 @@ Use a **Decision Tree Classifier** to predict whether an animal is a **cat**, **
    * Print tree rules using `export_text`  
 
 4. Compare how the different split ratios affect the results   
-5. Predict the animal type with features `[34, 17]` Use the trained model to **predict its class**)
+5. Predict the animal type with features `[34, 17]` Use the trained model to **predict its class**
 
 ## Sample Code
 
