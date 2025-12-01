@@ -1,6 +1,6 @@
 # Homework: Regression Tree – MSE, Split Quality, and R²
 
-<img src="images/tree1.png" width="55%"/>
+<img src="images/tree1.png" width="35%"/>
 
 
 In this exercise, you will practice **manual calculations** for a regression tree split and then **verify your results** using scikit-learn
