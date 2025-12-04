@@ -106,7 +106,60 @@
 
 ---
 
-## דוגמת קוד פשוטה בפייתון
+## דוגמת קוד פשוטה בפייתון עץ החלטה רגיל
+```python
+import numpy as np
+# import seaborn as sns   # not needed here unless you want plots
+from matplotlib import pyplot as plt
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+# --- Data (same as in your Random Forest example) ---
+
+study_hours = [2, 8, 5, 1, 7, 3, 6, 4, 9, 2, 7, 4, 8, 3, 6, 9, 5, 3, 7, 2]
+sleep_hours = [5, 8, 9, 4, 7, 8, 6, 7, 9, 6, 8, 5, 7, 6, 9, 8, 7, 5, 8, 4]
+had_breakfast = [1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0]  # 1=yes, 0=no
+
+X = np.column_stack((study_hours, sleep_hours, had_breakfast))
+
+y = np.array([0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0])
+
+# --- Train / test split ---
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+# --- Decision Tree model ---
+
+dt_model = DecisionTreeClassifier(
+    criterion="gini",   # or "entropy"
+    max_depth=None,     # you can try small values like 3 or 4
+    random_state=42
+)
+
+# Train the model
+dt_model.fit(X_train, y_train)
+
+# Predict on test set
+y_pred = dt_model.predict(X_test)
+
+# Accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Decision Tree Accuracy: {accuracy:.2f}")
+
+# Confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:")
+print(cm)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+## דוגמת קוד פשוטה בפייתון RANDOM FOREST
 
 ```python
 import numpy as np
