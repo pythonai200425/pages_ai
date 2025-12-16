@@ -43,3 +43,6 @@
 אילו מדדי ביצוע מתאימים להערכת מודל Random Forest בקלסיפיקציה וברגרסיה?
 
 ---
+
+יש לשלוח את הפתרון למייל:
+📧 [pythonai200425+supfinal@gmail.com](mailto:pythonai200425+supfinal@gmail.com)
