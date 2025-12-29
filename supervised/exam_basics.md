@@ -290,14 +290,25 @@ D. There is no difference between them
 
 ---
 
-## Question 18 – Model Definition
+## Question 18 – Regression Tree (Final Leaf MSE: Weighted vs Unweighted)
 
-What is a **model** in Machine Learning
+A regression tree ends in a **final leaf** that contains **two groups** of samples:
 
-A. A raw dataset  
-B. A function or system that learns patterns from data and makes predictions on new data  
-C. A visualization tool  
-D. A data cleaning algorithm  
+- **Group A**:  
+  - Number of samples: \( n_A = 2 \)  
+  - Mean Squared errors: \( 5 \)
+
+- **Group B**:  
+  - Number of samples: \( n_B = 8 \)  
+  - Mean Squared errors: \( 4 \)
+
+Compute the **overall Mean Squared Error (MSE)** of the leaf.
+
+### Options
+A. \( 4.2 \)  
+B. \( 4.5 \)  
+C. \( 4.0 \)  
+D. \( 5.0 \)
 
 ---
 
@@ -325,12 +336,59 @@ D. Unsupervised problems only
 
 ## Question 21 – Decision Tree (Regression)
 
-A regression tree predicts values by:
+### Question
 
-A. Taking the maximum value in each leaf  
-B. Taking the average of target values in each leaf  
-C. Using a sigmoid function  
-D. Selecting a random value  
+You are given a dataset with **one feature**:
+
+**X = [4, 8, 10]**
+
+You want to apply **polynomial regression with degree (power) = 2**.
+
+Which of the following correctly represents the transformed feature matrix
+(including the bias term)?
+
+---
+
+### Options
+
+**A)**
+
+```
+[
+ 1   4  
+ 1   8  
+ 1  10  
+]
+```
+**B)**
+
+```
+[
+ 1   4   16
+ 1   8   64
+ 1  10  100
+]
+```
+
+**C)**
+
+```
+[
+ 4   16
+ 8   64
+10  100
+]
+```
+
+**D)**
+
+```
+[
+ 1   16
+ 1   64
+ 1  100
+]
+```
 
 ---
 
@@ -345,14 +403,23 @@ D. Converts regression into classification
 
 ---
 
-## Question 23 – KNN (Effect of K)
+## Question 23 - Adjusted R²
 
-What is a likely effect of choosing a very small value of **K** in KNN
+You are comparing two regression models trained on the **same dataset**:
 
-A. High bias, low variance  
-B. Low bias, high variance  
-C. No effect on the model  
-D. Model becomes linear  
+* **Model A**: uses 2 features
+* **Model B**: uses 5 features
+
+Both models have a similar **R² score**.
+
+Why is **Adjusted R²** preferred over **R²** in this situation?
+
+### Options
+
+**A)** Adjusted R² always increases when more features are added  
+**B)** Adjusted R² penalizes models for adding features that do not improve the model significantly  
+**C)** Adjusted R² ignores the number of features and only measures error  
+**D)** Adjusted R² can only be used for polynomial regression  
 
 ---
 
