@@ -305,10 +305,10 @@ A regression tree ends in a **final leaf** that contains **two groups** of sampl
 Compute the **overall Mean Squared Error (MSE)** of the leaf.
 
 ### Options
-A. \( 4.2 \)  
-B. \( 4.5 \)  
-C. \( 4.0 \)  
-D. \( 5.0 \)
+A.  4.2   
+B.  4.5   
+C.  4.0   
+D.  5.0  
 
 ---
 
@@ -346,10 +346,6 @@ You want to apply **polynomial regression with degree (power) = 2**.
 
 Which of the following correctly represents the transformed feature matrix
 (including the bias term)?
-
----
-
-### Options
 
 **A)**
 
