@@ -302,7 +302,7 @@ A regression tree ends in a **final leaf** that contains **two groups** of sampl
   - Number of samples: \( n_B = 8 \)  
   - Mean Squared errors: \( 4 \)
 
-Compute the **overall Mean Squared Error (MSE)** of the leaf.
+Compute the **overall Mean Squared Error (MSE)** of the leaf
 
 ### Options
 A.  4.2   
@@ -342,7 +342,7 @@ You are given a dataset with **one feature**:
 
 **X = [4, 8, 10]**
 
-You want to apply **polynomial regression with degree (power) = 2**.
+You want to apply **polynomial regression with degree (power) = 2**
 
 Which of the following correctly represents the transformed feature matrix
 (including the bias term)?
@@ -406,7 +406,7 @@ You are comparing two regression models trained on the **same dataset**:
 * **Model A**: uses 2 features
 * **Model B**: uses 5 features
 
-Both models have a similar **R² score**.
+Both models have a similar **R² score**
 
 Why is **Adjusted R²** preferred over **R²** in this situation?
 
