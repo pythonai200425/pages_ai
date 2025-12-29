@@ -7,7 +7,7 @@
 * Show calculations where required
 * Do not assume missing data
 
-pythonai200425_aibasic@gmail.com
+pythonai200425+aibasic@gmail.com
 
 ---
 
