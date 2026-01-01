@@ -1,6 +1,6 @@
-# Feature Scaling and Regularization
+# אופטימיזציה של מודלים
 
-## Feature Scaling
+### Feature Scaling
 
 Feature scaling is a preprocessing step that transforms numerical features to a comparable scale. This is essential when features have different ranges or units.
 
