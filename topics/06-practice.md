@@ -49,7 +49,7 @@ y = (score > 0).astype(int)
    * `test_size=0.2`
    * `random_state=42`
 
-אימן Logistic Regression **בלי שום סקיילינג**
+אימון Logistic Regression **בלי שום סקיילינג**
 
    * השתמש ב־`LogisticRegression`
    * השתמש ב־ `max_iter=1000`
@@ -64,7 +64,7 @@ y = (score > 0).astype(int)
 
    * פ- `StandardScaler`
 
-אימן שוב Logistic Regression על הנתונים אחרי סקיילינג
+אימון שוב Logistic Regression על הנתונים אחרי סקיילינג
 
 הדפס דיוק על ה־Test
 
@@ -91,7 +91,7 @@ y = (score > 0).astype(int)
 
 הדפס mean
 
-אימן את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
+אימון את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
 
 ## Save & Load the Pipeline + Prediction
 
