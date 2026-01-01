@@ -105,7 +105,7 @@ y = (score > 0).astype(int)
 sample = np.array([[120_000, 2, 10, 720]])
 ```
 
-4. הדפס
+הדפס
 
 `pred` (0/1)
 וגם `predict_proba` (הסתברות למחלקה 1)
