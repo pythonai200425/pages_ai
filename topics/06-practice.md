@@ -1,6 +1,6 @@
 # תרגול פיצ'ר סקייל עם פייפליין
 
-## Goal
+## מטרה
 
 לאמן מודל **Logistic Regression** על דאטה נתון
 
@@ -52,7 +52,7 @@ y = (score > 0).astype(int)
 2. אימן Logistic Regression **בלי שום סקיילינג**
 
    * השתמש ב־`LogisticRegression`
-   * אם אתה מקבל בעיית התכנסות, השתמש ב־`max_iter=1000`
+   * השתמש ב־ `max_iter=1000`
 
 3. הדפס דיוק (Accuracy) על ה־Test
 
@@ -63,8 +63,6 @@ y = (score > 0).astype(int)
 1. בצע Standard Scaling על הפיצ’רים
 
    * `StandardScaler`
-   * `fit` על `X_train` בלבד
-   * `transform` גם ל־`X_train` וגם ל־`X_test`
 
 2. אימן שוב Logistic Regression על הנתונים אחרי סקיילינג
 
@@ -80,13 +78,7 @@ y = (score > 0).astype(int)
 חשב Cross Validation Accuracy
 
    * `cross_val_score(model, X, y, cv=5, scoring="accuracy")`
-   * הדפס
-
-     * ממוצע (`mean`)
-
-
-* CV mean accuracy
-* CV std
+   * הדפס ממוצע
 
 ## Convert to Pipeline (best practice)
 
@@ -97,7 +89,7 @@ y = (score > 0).astype(int)
 
 2. הרץ Cross Validation על ה־Pipeline (cv=5)
 
-* הדפס mean ו־std
+* הדפס mean
 
 3. אימן את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
 
@@ -105,12 +97,7 @@ y = (score > 0).astype(int)
 
 1. שמור את ה־Pipeline לקובץ
 
-   * מומלץ `joblib.dump`
-   * שם קובץ `loan_lr_pipeline.pkl`
-
 2. טען את ה־Pipeline מהקובץ
-
-   * `joblib.load`
 
 3. בצע Prediction עבור הדוגמה הבאה
 
