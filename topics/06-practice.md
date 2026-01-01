@@ -60,46 +60,46 @@ y = (score > 0).astype(int)
 
 ## Train with StandardScaler
 
-1. בצע Standard Scaling על הפיצ’רים
+בצע Standard Scaling על הפיצ’רים
 
-   * `StandardScaler`
+   * פ- `StandardScaler`
 
-2. אימן שוב Logistic Regression על הנתונים אחרי סקיילינג
+אימן שוב Logistic Regression על הנתונים אחרי סקיילינג
 
-3. הדפס דיוק על ה־Test
+הדפס דיוק על ה־Test
 
-4. השווה בין
+השווה בין
 
-* Accuracy בלי סקיילינג
-* Accuracy עם StandardScaler
+* פ- Accuracy בלי סקיילינג
+* פ- Accuracy עם StandardScaler
 
 ## Improve with Cross Validation
 
 חשב Cross Validation Accuracy
 
-   * `cross_val_score(model, X, y, cv=5, scoring="accuracy")`
+   * פ- `cross_val_score(model, X, y, cv=5, scoring="accuracy")`
    * הדפס ממוצע
 
 ## Convert to Pipeline (best practice)
 
-1. צור Pipeline שמבצע
+צור Pipeline שמבצע
 
-* StandardScaler
-* LogisticRegression
+* פ- StandardScaler
+* פ- LogisticRegression
 
-2. הרץ Cross Validation על ה־Pipeline (cv=5)
+הרץ Cross Validation על ה־Pipeline (cv=5)
 
-* הדפס mean
+הדפס mean
 
-3. אימן את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
+אימן את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
 
 ## Save & Load the Pipeline + Prediction
 
-1. שמור את ה־Pipeline לקובץ
+שמור את ה־Pipeline לקובץ
 
-2. טען את ה־Pipeline מהקובץ
+טען את ה־Pipeline מהקובץ
 
-3. בצע Prediction עבור הדוגמה הבאה
+בצע Prediction עבור הדוגמה הבאה
 
 ```python
 sample = np.array([[120_000, 2, 10, 720]])
@@ -107,8 +107,8 @@ sample = np.array([[120_000, 2, 10, 720]])
 
 4. הדפס
 
-* `pred` (0/1)
-* וגם `predict_proba` (הסתברות למחלקה 1)
+`pred` (0/1)
+וגם `predict_proba` (הסתברות למחלקה 1)
 
 יש לשלוח את הפתרון למייל:
 📧 [pythonai200425+optimize1@gmail.com](mailto:pythonai200425+optimize1@gmail.com)
