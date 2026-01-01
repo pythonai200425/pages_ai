@@ -43,18 +43,18 @@ y = (score > 0).astype(int)
 
 ## Train/Test Split + Logistic Regression (No Scaling)
 
-1. חלק את הנתונים ל־Train/Test
+חלק את הנתונים ל־Train/Test
 
    * השתמש ב־`train_test_split`
    * `test_size=0.2`
    * `random_state=42`
 
-2. אימן Logistic Regression **בלי שום סקיילינג**
+אימן Logistic Regression **בלי שום סקיילינג**
 
    * השתמש ב־`LogisticRegression`
    * השתמש ב־ `max_iter=1000`
 
-3. הדפס דיוק (Accuracy) על ה־Test
+הדפס דיוק (Accuracy) על ה־Test
 
    * `accuracy_score(y_test, y_pred)`
 
