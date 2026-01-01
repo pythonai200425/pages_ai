@@ -56,7 +56,7 @@ y = (score > 0).astype(int)
 
 הדפס דיוק (Accuracy) על ה־Test
 
-   * `accuracy_score(y_test, y_pred)`
+   * פ- `accuracy_score(y_test, y_pred)`
 
 ## Train with StandardScaler
 
