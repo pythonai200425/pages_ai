@@ -1,6 +1,6 @@
 # אופטימיזציה של מודלים
 
-### GridSearchCV with KNN – Explanation & Example
+## GridSearchCV with KNN – Explanation & Example
 
 `GridSearchCV` from Scikit-learn helps you **find the best parameters** for your model  
 by searching through all possible combinations (a "grid") of parameters.

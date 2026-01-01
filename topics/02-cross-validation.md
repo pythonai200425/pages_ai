@@ -1,7 +1,7 @@
 
 # אופטימיזציה של מודלים
 
-### Cross-Validation (אימות צולב)
+## Cross-Validation (אימות צולב)
 
 <img src="images/crossv.png" width="80%"/>
 
