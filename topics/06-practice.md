@@ -91,7 +91,7 @@ y = (score > 0).astype(int)
 
 הדפס mean
 
-אימון את ה־Pipeline על כל הדאטה (`X`, `y`) בסוף
+אימון של כל הדאטא על הפייפליין
 
 ## Save & Load the Pipeline + Prediction
 
