@@ -22,8 +22,7 @@ The idea:
 * Measure how the clustering error changes
 * Choose the value of k where improvement starts to slow down (the "elbow")
 
-**Link to class code – Elbow Method:**
-<a href="Fb-kmean.md" />
+<a href="Fb-kmean.md" >Link to class code – Elbow Method</a>
 
 ## Step 2: Image Color Quantization
 
@@ -35,8 +34,7 @@ After choosing the optimal k:
 
 The result should be a visually simplified version of the original image, using only the selected number of colors
 
-**Link to class code – Image Processing & Color Reduction:**
-<a href="Fc-kmean-image.md" />
+<a href="Fc-kmean-image.md">Link to class code – Image Processing & Color Reduction</a>
 
 ## Submission Email
 
