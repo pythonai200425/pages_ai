@@ -18,4 +18,4 @@
 8. צור ב- KMEAN את אותו מספר הקבוצות וספור כמה יש בכל קבוצה. האם יצא מספרים זהים? מדוע לדעתך
 9. נסה לצמצם את מספר הפיצ'רים באמצעות PCA, הדפס את רמת השונות אחרי הוספת כל PCA כפי שעשינו בכיתה  
 
-**Submission email**: [pythonai200425@gmail.com+unsuphw@gmail.com](mailto:pythonai200425@gmail.com+unsuphw@gmail.com)
+**Submission email**: [pythonai200425+unsuphw@gmail.com](mailto:pythonai200425+unsuphw@gmail.com)
