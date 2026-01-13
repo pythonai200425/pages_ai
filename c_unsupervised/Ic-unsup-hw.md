@@ -15,12 +15,7 @@
 5. צייר **Dendrogram** עם `dendrogram` ובחר מספר קבוצות (k) בהתאם לתרשים
 6. חתוך את העץ באמצעות `fcluster` ל־k קבוצות והוסף את התוויות כעמודה `cluster` ל־DataFrame
 7. הדפס ספירה של כמה דגימות יש בכל קבוצה באמצעות `value_counts`
-
-### בונוס
-
 8. צור ב- KMEAN את אותו מספר הקבוצות וספור כמה יש בכל קבוצה. האם יצא מספרים זהים? מדוע לדעתך
 9. נסה לצמצם את מספר הפיצ'רים באמצעות PCA, הדפס את רמת השונות אחרי הוספת כל PCA כפי שעשינו בכיתה  
-קוד לדוגמא: https://github.com/pythonai250824/31.08.2025/blob/main/pca_31_08_2025.ipynb   
-[דוגמא 2]
 
-**Submission email**: [pythonai250824+unsuphw@gmail.com](mailto:pythonai250824+unsuphw@gmail.com)
+**Submission email**: [pythonai200425@gmail.com+unsuphw@gmail.com](mailto:pythonai200425@gmail.com+unsuphw@gmail.com)
