@@ -345,6 +345,41 @@ print(prediction)
 
 <img src="images/cat.jpg" style="width:40%"/>
 
+
+### שמירה וטעינה מקובץ
+```python
+# Save the trained model to a file
+cnn.save('/content/drive/MyDrive/cat_dog_cnn_model.keras')
+
+from tensorflow.keras.models import load_model
+
+# Load the saved model
+model = load_model('cat_dog_cnn_model.keras')
+
+# Check that it loaded correctly
+model.summary()
+
+import numpy as np
+from tensorflow.keras.preprocessing import image
+
+img = image.load_img(
+    'cat1.jpg',
+    target_size=(64, 64)
+)
+
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)
+img_array /= 255.0
+
+prediction = model.predict(img_array)
+
+print(prediction[0][0])
+if prediction[0][0] > 0.5:
+    print("Dog 🐶")
+else:
+    print("Cat 🐱")
+```
+
 הסבר:
 
 * `image.load_img` טוען את התמונה ומכווץ אותה לגודל המתאים
