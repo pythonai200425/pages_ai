@@ -354,7 +354,7 @@ cnn.save('/content/drive/MyDrive/cat_dog_cnn_model.keras')
 from tensorflow.keras.models import load_model
 
 # Load the saved model
-model = load_model('cat_dog_cnn_model.keras')
+model = load_model('/content/drive/MyDrive/cat_dog_cnn_model.keras')
 
 # Check that it loaded correctly
 model.summary()
