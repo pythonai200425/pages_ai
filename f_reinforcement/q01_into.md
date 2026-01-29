@@ -1,6 +1,6 @@
 # Reinforcement Learning (RL) — Rock 🟡 Paper 📄 Scissors ✂️
 
-## 1️⃣ What Reinforcement Learning even is (VERY slow)
+## 1️⃣ What Reinforcement Learning even is?
 
 Reinforcement Learning is a way to teach a computer **by experience**, not by rules
 
