@@ -128,9 +128,45 @@ Training usually looks like:
 * Start with high epsilon
 * Slowly reduce it
 
-## 🧠 Gamma vs Epsilon — why we need BOTH (slow + clear)
+## 9️⃣ Showing the score
 
-This is the most confusing part of Reinforcement Learning — and your question is 100% valid
+We keep a score counter:
+
+* Wins: +1
+* Losses: -1
+* Draws: 0
+
+Total score shows:
+
+👉 "Is the agent actually learning?"
+
+If score goes up over many games → 🎉 success
+
+## 🔟 Full learning loop (slow recap)
+
+1. Agent looks at Q-table
+2. Agent maybe explores (epsilon)
+3. Agent chooses 🟡 / 📄 / ✂️
+4. Game returns reward
+5. Q-table is updated
+6. Score is updated
+7. Repeat MANY times
+
+## Final brain-friendly summary 🧠
+
+* Agent = learner
+* Reward = feedback
+* Q-table = memory
+* Gamma = future thinking
+* Epsilon = curiosity
+
+Reinforcement Learning is literally:
+
+> Try → Fail → Remember → Improve
+
+# Appendix A
+
+## 🧠 Gamma vs Epsilon — why we need BOTH 
 
 ### 🔑 One-line difference (lock this in)
 
@@ -228,41 +264,4 @@ Example:
 * Low epsilon ≠ short-term thinking
 
 Both are required for learning to actually work
-
-## 9️⃣ Showing the score
-
-We keep a score counter:
-
-* Wins: +1
-* Losses: -1
-* Draws: 0
-
-Total score shows:
-
-👉 "Is the agent actually learning?"
-
-If score goes up over many games → 🎉 success
-
-## 🔟 Full learning loop (slow recap)
-
-1. Agent looks at Q-table
-2. Agent maybe explores (epsilon)
-3. Agent chooses 🟡 / 📄 / ✂️
-4. Game returns reward
-5. Q-table is updated
-6. Score is updated
-7. Repeat MANY times
-
-## Final brain-friendly summary 🧠
-
-* Agent = learner
-* Reward = feedback
-* Q-table = memory
-* Gamma = future thinking
-* Epsilon = curiosity
-
-Reinforcement Learning is literally:
-
-> Try → Fail → Remember → Improve
-
 
