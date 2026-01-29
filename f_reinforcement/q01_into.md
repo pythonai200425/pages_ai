@@ -128,6 +128,107 @@ Training usually looks like:
 * Start with high epsilon
 * Slowly reduce it
 
+## 🧠 Gamma vs Epsilon — why we need BOTH (slow + clear)
+
+This is the most confusing part of Reinforcement Learning — and your question is 100% valid
+
+### 🔑 One-line difference (lock this in)
+
+* **Gamma (γ)** decides **how rewards are judged** (learning)
+* **Epsilon (ε)** decides **how actions are chosen** (behavior)
+
+They never do the same job
+
+## 1️⃣ Gamma (γ): how the agent THINKS about rewards
+
+Gamma answers:
+
+👉 "When I update my memory… do I care about the future?"
+
+* **Low gamma (YOLO mindset)**
+
+  * Only immediate reward matters
+  * "Did I win THIS round?"
+
+* **High gamma (planner mindset)**
+
+  * Immediate reward + future rewards
+  * "Does this help me win MORE later?"
+
+⚠️ Gamma does **NOT** choose actions
+
+It only affects how numbers are written into the Q-table
+
+## 2️⃣ Epsilon (ε): how the agent ACTS
+
+Epsilon answers:
+
+👉 "Do I trust my knowledge or act randomly?"
+
+* **High epsilon**
+
+  * Ignore the Q-table
+  * Try random moves 🟡 📄 ✂️
+
+* **Low epsilon**
+
+  * Follow the highest Q-value
+  * Play the best-known move
+
+⚠️ Epsilon does **NOT** affect learning math
+
+It only affects what action is picked
+
+## 3️⃣ The missing mental model (VERY important)
+
+Every round has TWO separate steps:
+
+1. **Choose an action** → controlled by **epsilon**
+2. **Learn from the result** → controlled by **gamma**
+
+They happen at different times
+
+## 4️⃣ Why low gamma does NOT replace epsilon
+
+This is the key misunderstanding:
+
+> "Low gamma = YOLO, so why not just pick the safest option?"
+
+Because:
+
+* Gamma does not choose actions
+* Without epsilon, the agent NEVER explores
+
+Example:
+
+* Agent once wins with 🟡
+* Q-table slightly prefers 🟡
+* Without epsilon → agent plays 🟡 forever
+* Even if 📄 is better
+
+## 5️⃣ What breaks if one is missing
+
+### ❌ No epsilon
+
+* No exploration
+* Gets stuck in habits
+* Learns slowly or incorrectly
+
+### ❌ No gamma
+
+* No long-term learning
+* Values stay noisy
+* Strategy never stabilizes
+
+## 🔒 Final lock-in summary
+
+* **Gamma = how far into the future learning looks**
+* **Epsilon = whether the agent explores or exploits**
+* Low gamma ≠ safe choices
+* Low epsilon ≠ short-term thinking
+
+Both are required for learning to actually work
+
 ## 9️⃣ Showing the score
 
 We keep a score counter:
@@ -163,4 +264,5 @@ If score goes up over many games → 🎉 success
 Reinforcement Learning is literally:
 
 > Try → Fail → Remember → Improve
+
 
