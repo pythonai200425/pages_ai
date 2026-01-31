@@ -75,7 +75,7 @@ Tradeoff to be aware of:
 * Like many scanners, pattern-based detection can create false positives if rules aren’t tuned
 * Some other tools may offer stronger “verification” and enterprise workflows (depending on product)
 
-# Gitleaks – Installation (Windows & macOS)
+## Gitleaks – Installation (Windows & macOS)
 
 Simplest way to install Gitleaks on **Windows** and **macOS**
 
