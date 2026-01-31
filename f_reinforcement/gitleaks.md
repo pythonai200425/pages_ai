@@ -299,3 +299,111 @@ REDACTED
 
 * Local debugging on your own machine
 * Temporary scans where output is not saved
+
+# GitHub Actions + Gitleaks Secret Scan
+
+## What is GitHub Actions
+
+GitHub Actions is GitHub’s built-in CI/CD system. It runs **workflows** (automations) when events happen in your repo, like:
+
+* `push` to a branch
+* `pull_request` opened/updated
+* `workflow_dispatch` (manual run)
+* on a schedule (`cron`)
+
+A workflow is a YAML file stored here:
+
+* `.github/workflows/<workflow-name>.yml`
+
+It contains:
+
+* **Triggers** (`on:`)
+* **Jobs** (a job runs on a runner like `ubuntu-latest`)
+* **Steps** (each step runs a command or uses an action)
+
+# Gitleaks Configuration, Bypass, and Commit History
+
+## The `.gitleaks.toml` File
+
+The `.gitleaks.toml` file controls how Gitleaks behaves in your repository. It lets you fine‑tune secret detection so the scan is strict **but not noisy**.
+
+It is typically placed at the root of the repository:
+
+* `.gitleaks.toml`
+
+### What it is used for
+
+* Allowlisting known safe files or folders (docs, examples, fixtures)
+* Allowlisting specific patterns that look like secrets but are fake
+* Ignoring specific historical commits that cannot be changed
+* Customizing or adding detection rules
+
+### Common allowlist patterns
+
+Ignore entire directories:
+
+```toml
+[allowlist]
+paths = [
+  "docs/",
+  "examples/",
+  "tests/fixtures/"
+]
+```
+
+Ignore known fake secrets using regex:
+
+```toml
+[allowlist]
+regexes = [
+  "FAKE_[A-Z0-9_]+",
+  "TEST_TOKEN_[0-9]+"
+]
+```
+
+These rules reduce false positives while keeping real secret detection active
+
+## Commit History Scanning
+
+By default, Gitleaks scans **git history**, not just the files in the working tree
+
+That means:
+
+* A secret committed **years ago** can still fail today’s CI
+* Removing a secret from the file is not enough if it exists in history
+
+This is why CI workflows often use:
+
+```yml
+fetch-depth: 0
+```
+
+It allows Gitleaks to inspect all commits instead of only the latest one
+
+## Ignoring Historical Commits
+
+Sometimes you cannot rewrite history (forks, long‑lived repos, compliance reasons). In that case, you can allowlist specific commits
+
+Example:
+
+```toml
+[allowlist]
+commits = [
+  "a1b2c3d4e5f6g7h8i9j0"
+]
+```
+
+Use this only when:
+
+* The secret is already revoked
+* History rewriting is not possible
+* The risk is fully understood
+
+## Best Practice Summary
+
+* Use `.gitleaks.toml` instead of disabling scans
+* Prefer path and regex allowlists over commit allowlists
+* Rotate secrets immediately if Gitleaks detects them
+* Keep history scanning enabled for real security value
+
+This keeps secret scanning strict, auditable, and CI‑friendly
