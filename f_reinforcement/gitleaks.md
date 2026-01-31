@@ -79,8 +79,6 @@ Tradeoff to be aware of:
 
 Simplest way to install Gitleaks on **Windows** and **macOS**
 
----
-
 ## macOS
 
 ### Option 1: Homebrew (recommended)
@@ -94,8 +92,6 @@ Verify installation:
 ```bash
 gitleaks version
 ```
-
----
 
 ### Option 2: Prebuilt binary
 
@@ -112,8 +108,6 @@ Verify:
 ```bash
 gitleaks version
 ```
-
----
 
 ## Windows
 
@@ -135,8 +129,6 @@ Verify in PowerShell or CMD:
 gitleaks version
 ```
 
----
-
 ### Option 2: Chocolatey
 
 If you use Chocolatey:
@@ -150,8 +142,6 @@ Verify:
 ```powershell
 gitleaks version
 ```
-
----
 
 ## After installation
 
@@ -218,8 +208,6 @@ console.log("app started")
 
 This file contains a hardcoded API key, which is exactly the kind of issue Gitleaks is designed to detect
 
----
-
 ## Running Gitleaks
 
 Run Gitleaks against the current directory and output the results as JSON:
@@ -239,8 +227,6 @@ What this command does:
 * Outputs findings in JSON format
 * Writes results to a file
 * Redacts secret values from the output
-
----
 
 ## Example finding (output)
 
@@ -267,8 +253,6 @@ The finding tells you:
 * Which rule matched
 
 But the real secret value is not exposed
-
----
 
 ## What does "redacted" mean
 
