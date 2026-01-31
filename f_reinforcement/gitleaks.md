@@ -75,6 +75,95 @@ Tradeoff to be aware of:
 * Like many scanners, pattern-based detection can create false positives if rules aren’t tuned
 * Some other tools may offer stronger “verification” and enterprise workflows (depending on product)
 
+# Gitleaks – Installation (Windows & macOS)
+
+Simplest way to install Gitleaks on **Windows** and **macOS**
+
+---
+
+## macOS
+
+### Option 1: Homebrew (recommended)
+
+```bash
+brew install gitleaks
+```
+
+Verify installation:
+
+```bash
+gitleaks version
+```
+
+---
+
+### Option 2: Prebuilt binary
+
+1. Download the latest macOS release from GitHub
+2. Extract the archive
+3. Move the binary to a directory in your PATH
+
+```bash
+sudo mv gitleaks /usr/local/bin/
+```
+
+Verify:
+
+```bash
+gitleaks version
+```
+
+---
+
+## Windows
+
+### Option 1: Prebuilt binary (recommended)
+
+1. Download the latest Windows release from GitHub (`gitleaks_windows_x64.zip`)
+
+2. Extract the ZIP file
+
+3. Move `gitleaks.exe` to a directory such as:
+
+   * `C:\Program Files\Gitleaks\`
+
+4. Add that directory to your **PATH** environment variable
+
+Verify in PowerShell or CMD:
+
+```powershell
+gitleaks version
+```
+
+---
+
+### Option 2: Chocolatey
+
+If you use Chocolatey:
+
+```powershell
+choco install gitleaks
+```
+
+Verify:
+
+```powershell
+gitleaks version
+```
+
+---
+
+## After installation
+
+Run your first scan:
+
+```bash
+gitleaks detect --source .
+```
+
+If the command runs, Gitleaks is installed correctly
+
+
 Commonly used flags:
 
 * `--report-format`
@@ -82,7 +171,7 @@ Commonly used flags:
   Common values:
 
   * `json`
-  * `sarif`
+  * `sarif` SARIF (Static Analysis Results Interchange Format) representing the output of static analysis tools  
   * `csv`
   * `junit`
 
