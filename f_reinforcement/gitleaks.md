@@ -55,15 +55,16 @@ Where it’s especially useful:
 
 A few common alternatives (same problem space):
 
-* **TruffleHog** – Open-source secret scanner that searches git history and current files using regex and entropy analysis
+## Secret Scanning Tools – Comparison Table
 
-* **GitGuardian** – Commercial security platform with open-source tools, focused on real-time secret detection and remediation
-
-* **detect-secrets (Yelp)** – Lightweight open-source tool designed to prevent secrets from being committed, commonly used in pre-commit hooks
-
-* **GitHub Advanced Security secret scanning** – GitHub’s native secret scanning for repos, integrated into the platform and mostly available on paid plans
-
-* **GitLab Secret Detection** – Built-in GitLab CI feature that scans repositories for leaked credentials during pipelines
+| Tool                                           | Type                          | Open Source                   | Where it Runs                     | What it’s Best At                                                 | Typical Use Case                                   |
+| ---------------------------------------------- | ----------------------------- | ----------------------------- | --------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------- |
+| **Gitleaks**                                   | Static secret scanning (SAST) | ✅ Yes                         | Local, CI, Docker, GitHub Actions | Fast scanning of repos, git history, and files for leaked secrets | CI pipelines, pre-commit checks, org-wide scanning |
+| **TruffleHog**                                 | Static secret scanning (SAST) | ✅ Yes                         | Local, CI                         | Deep scanning with regex + entropy to catch high-risk secrets     | Security audits, historical repo scans             |
+| **GitGuardian**                                | Secret scanning platform      | ⚠️ Partially (core tools OSS) | SaaS + local hooks                | Real-time detection, alerts, remediation workflows                | Teams & orgs needing monitoring + dashboards       |
+| **detect-secrets (Yelp)**                      | Static secret scanning (SAST) | ✅ Yes                         | Local, pre-commit, CI             | Preventing secrets before they are committed                      | Developer laptops, pre-commit hooks                |
+| **GitHub Advanced Security – Secret Scanning** | Native platform feature       | ❌ No (commercial)             | GitHub only                       | Automatic detection of known secret patterns                      | Enterprises fully on GitHub                        |
+| **GitLab Secret Detection**                    | Native CI feature             | ❌ No (platform feature)       | GitLab CI                         | Built-in secret detection during pipelines                        | Teams using GitLab CI/CD                           |
 
 ## Why people pick Gitleaks (and when it’s “better”)
 
