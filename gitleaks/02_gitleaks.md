@@ -75,3 +75,6 @@ Instead of showing the real password, token, or API key, Gitleaks masks it so th
 * Local debugging on your own machine
 * Temporary scans where output is not saved
 
+# [DEMO]
+
+* Simple project demo
