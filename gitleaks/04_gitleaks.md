@@ -80,7 +80,17 @@ Use this only when:
 
 ## Customizing or Adding Detection Rules – Examples
 
-This shows **practical examples** of how you customize or add your own detection rules (using Gitleaks-style config).
+This shows **practical examples** of how you customize or add your own detection rules (using Gitleaks-style config)  
+
+### Entropy values – what they mean
+
+| Entropy value | Meaning                |
+| ------------- | ---------------------- |
+| `0`           | No randomness required |
+| `1–2`         | Slight randomness      |
+| `3–4`         | Typical API keys       |
+| `4+`          | Very                   |
+
 
 ## 1️⃣ Add a custom rule for a company-specific API key
 
