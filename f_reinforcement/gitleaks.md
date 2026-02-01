@@ -84,9 +84,9 @@ docker run --rm -v C:\projects\my-app:/repo zricethezav/gitleaks:latest detect -
 
 --rm remove the docker container after the scan
 
-❌ Can Docker scan a GitHub repo without cloning?
+❌ Can Docker scan a GitHub repo without cloning? No
 
-❌ No
+❌ You cannot run Gitleaks on a GitHub folder without cloning it 
 
 ## macOS
 
