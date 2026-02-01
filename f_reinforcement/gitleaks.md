@@ -343,6 +343,10 @@ jobs:
             detect --source=/repo
 ```
 
+**uses: actions/checkout@v4**  
+Run an existing action (not a shell command)  
+@v4 means: “Use version 4 of this action”  
+
 ### 4️⃣ Commit the file
 
 That’s it ✅
