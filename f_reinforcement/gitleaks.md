@@ -75,6 +75,19 @@ Gitleaks tends to win when you want something that’s:
 
 Simplest way to install Gitleaks on **Windows** and **macOS**
 
+### Docker
+
+```
+docker run --rm -v C:\projects\my-app:/repo zricethezav/gitleaks:latest detect --source=/repo
+```
+-v C:\projects\my-app:/repo share my folder with Docker
+
+--rm remove the docker container after the scan
+
+❌ Can Docker scan a GitHub repo without cloning?
+
+❌ No
+
 ## macOS
 
 ### Option 1: Homebrew (recommended)
@@ -125,7 +138,7 @@ Verify in PowerShell or CMD:
 gitleaks version
 ```
 
-### Option 2: Chocolatey
+### Option 2: Chocolatey [Chocolatey is a package manager for Windows]
 
 If you use Chocolatey:
 
