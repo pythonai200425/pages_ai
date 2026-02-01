@@ -1,4 +1,4 @@
-# Gitleaks
+<img src="git_leaks.png" />
 
 ## What is Gitleaks
 
