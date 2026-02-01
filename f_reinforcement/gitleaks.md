@@ -12,7 +12,7 @@ You can run it on:
 * Input from stdin (so you can pipe content into it)  
   ```git diff --cached | gitleaks detect --stdin --redact```
 
-## Who made it
+## Who made it ?
 
 Gitleaks was created by **Zachary (Zach) Rice**
 It’s maintained by the Gitleaks project/community (the project is still actively updated)
@@ -70,11 +70,6 @@ Gitleaks tends to win when you want something that’s:
 * **Runs locally/offline** (you don’t need to send code to a third party)
 * **Highly configurable** (custom rules, allowlists/baselines)
 * **Portable** (single binary feel, plus Docker / GitHub Action options)
-
-Tradeoff to be aware of:
-
-* Like many scanners, pattern-based detection can create false positives if rules aren’t tuned
-* Some other tools may offer stronger “verification” and enterprise workflows (depending on product)
 
 ## Gitleaks – Installation (Windows & macOS)
 
