@@ -86,7 +86,7 @@ docker run --rm -v C:\projects\my-app:/repo zricethezav/gitleaks:latest detect -
 
 ❌ Can Docker scan a GitHub repo without cloning? No
 
-❌ You cannot run Gitleaks on a GitHub folder without cloning it 
+❌ Can we run Gitleaks on a GitHub folder without cloning it ? No
 
 ## macOS
 
@@ -263,7 +263,7 @@ The finding tells you:
 
 But the real secret value is not exposed
 
-## What does "redacted" mean
+**What does "redacted" mean**
 
 "Redacted" means the **actual secret value is intentionally hidden** in the output
 
@@ -273,38 +273,7 @@ Instead of showing the real password, token, or API key, Gitleaks masks it so th
 * Security reports
 * Stored artifacts
 
-### Example
-
-Original secret in code:
-
-```text
-sk_live_1234567890abcdef1234567890abcdef
-```
-
-Redacted output:
-
-```text
-sk_live_**********************
-```
-
-or:
-
-```text
-REDACTED
-```
-
-### Why redaction is important
-
-* Prevents secondary leaks caused by reports themselves
-* Safe to store and share reports
-* Recommended best practice for CI/CD pipelines
-
-### When to use `--redact`
-
-* Always in CI/CD
-* When reports are uploaded, archived, or shared
-
-### When you might skip it
+**When you might skip it**
 
 * Local debugging on your own machine
 * Temporary scans where output is not saved
