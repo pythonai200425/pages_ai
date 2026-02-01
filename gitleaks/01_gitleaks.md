@@ -210,4 +210,4 @@ gitleaks detect \
   --redact
 ```
 
-
+<a href="02_gitleaks.md" >next >></a>
