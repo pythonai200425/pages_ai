@@ -9,7 +9,7 @@ You can run it on:
 
 * Git repositories (including commit history)
 * Files / folders
-* Input from stdin (so you can pipe content into it)
+* Input from stdin (so you can pipe content into it)  
   ```git diff --cached | gitleaks detect --stdin --redact```
 
 ## Who made it
