@@ -186,7 +186,7 @@ This tells Gitleaks:
 
 ## 5️⃣ Add a rule limited to certain file types
 
-Only scan `.env` files:
+Only scan `.env` files for this rule:
 
 ```toml
 [[rules]]
@@ -218,11 +218,6 @@ docker run --rm -v .:/repo zricethezav/gitleaks:latest \
   detect --source=/repo --config=/repo/.gitleaks.toml
 ```
 
-## One-sentence takeaway
-
-Custom rules let you catch **your real secrets**, reduce noise, and adapt secret scanning to how *your* organization actually works
-
-
 ## Best Practice Summary
 
 * Use `.gitleaks.toml` instead of disabling scans
@@ -231,3 +226,5 @@ Custom rules let you catch **your real secrets**, reduce noise, and adapt secret
 * Keep history scanning enabled for real security value
 
 This keeps secret scanning strict, auditable, and CI‑friendly
+
+<img src="thank_you.png" />
