@@ -194,11 +194,11 @@ Commonly used flags:
 
 * `--baseline-path`
   Ignore already-known findings (useful for legacy repos)  
-  How it works (conceptually)   
-  You run Gitleaks once to find all current leaks  
-  You save those findings as a baseline file  
-  Future scans compare against that baseline  
-  Only new findings are reported  
+  How it works ?
+  * You run Gitleaks once to find all current leaks  
+  * You save those findings as a baseline file  
+  * Future scans compare against that baseline  
+  * Only new findings are reported  
 
 Example (JSON output):
 
