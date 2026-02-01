@@ -1,7 +1,5 @@
 <img src="git_leaks.png" />
 
-## What is Gitleaks
-
 Gitleaks is an open-source **secret scanning** tool
 It looks for things that should *never* be committed into code, like passwords, API keys, tokens, private keys, and other credentials
 
