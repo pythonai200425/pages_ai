@@ -299,13 +299,13 @@ It contains:
 * **Jobs** (a job runs on a runner like `ubuntu-latest`)
 * **Steps** (each step runs a command or uses an action)
 
-## Demo ✅ In a few steps 
+### Demo ✅ In a few steps 
 
-### 1️⃣ Open your GitHub repo
+#### 1️⃣ Open your GitHub repo
 
 Public or private — both work
 
-### 2️⃣ Create this file in the repo
+#### 2️⃣ Create this file in the repo
 
 **Path:**
 
@@ -318,7 +318,7 @@ You can do this directly in GitHub:
 * **Add file** → **Create new file**
 * Paste the path above
 
-### 3️⃣ Paste this content
+#### 3️⃣ Paste this content
 
 ```yaml
 name: Gitleaks Scan
@@ -347,7 +347,7 @@ jobs:
 Run an existing action (not a shell command)  
 @v4 means: “Use version 4 of this action”  
 
-### 4️⃣ Commit the file
+#### 4️⃣ Commit the file
 
 That’s it ✅
 No settings, no secrets, no Docker install on your side
