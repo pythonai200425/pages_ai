@@ -53,6 +53,8 @@ We convert feelings into numbers (computers love numbers)
 
 This number is called the **reward**
 
+<img src="ttt_game_flow.png" />
+
 ## 5️⃣ What is a Q-table? (the heart of RL)
 
 Q-table = the agent's **cheat sheet / memory**
