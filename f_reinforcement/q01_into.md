@@ -84,7 +84,7 @@ Higher number = better idea
 
 simple example:
 
-<img src="qtable_ttt_2" />
+<img src="qtable_ttt_2.png" />
 
 ## 6️⃣ How the Q-table is updated (baby steps)
 
