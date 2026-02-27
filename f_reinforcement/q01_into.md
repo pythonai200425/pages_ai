@@ -1,5 +1,7 @@
 # Reinforcement Learning (RL) — Rock 🟡 Paper 📄 Scissors ✂️
 
+# Introduction
+
 ## 1️⃣ What Reinforcement Learning even is?
 
 Reinforcement Learning is a way to teach a computer **by experience**, not by rules
@@ -88,6 +90,8 @@ Slow brain formula (no math panic):
 new value = old value + small correction
 
 That correction depends on reward and future hope
+
+# Let's get technical
 
 ## 7️⃣ Gamma (γ) — thinking about the future
 
