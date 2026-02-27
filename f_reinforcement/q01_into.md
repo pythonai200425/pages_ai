@@ -108,7 +108,7 @@ new value = old value + small correction
 
 That correction depends on reward and future hope
 
-# How does the agent choose?
+# Flow and Strategy
 
 ## 7️⃣ Gamma (γ) — thinking about the future
 
