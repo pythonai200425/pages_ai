@@ -82,6 +82,10 @@ Possible actions:
 
 Higher number = better idea
 
+simple example:
+
+<img src="qtable_ttt_2" />
+
 ## 6️⃣ How the Q-table is updated (baby steps)
 
 After each move:
