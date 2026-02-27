@@ -96,6 +96,8 @@ After each move:
 2. Game gives a reward (if terminal)
 3. Agent updates ONE number in the Q-table
 
+<img src="qtable_ttt4.png" />
+
 Simple idea:
 
 "Was this better or worse than I expected?"
