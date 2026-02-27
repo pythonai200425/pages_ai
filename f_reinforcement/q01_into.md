@@ -149,21 +149,7 @@ Training usually looks like:
 * Start with high epsilon
 * Slowly reduce it
 
-## 9️⃣ Showing the score
-
-We keep a score counter:
-
-* Wins: +1
-* Losses: -1
-* Draws: 0
-
-Total score shows:
-
-👉 "Is the agent actually learning?"
-
-If score goes up over many games → 🎉 success
-
-## 🔟 Full learning loop (slow recap)
+## 9️⃣ Full learning loop (slow recap)
 
 1. Agent looks at Q-table
 2. Agent maybe explores (epsilon)
@@ -173,7 +159,7 @@ If score goes up over many games → 🎉 success
 6. Score is updated
 7. Repeat MANY games
 
-## Final brain-friendly summary 🧠
+## Summary 🧠
 
 * Agent = learner
 * Reward = feedback
@@ -184,103 +170,3 @@ If score goes up over many games → 🎉 success
 Reinforcement Learning is literally:
 
 > Try → Fail → Remember → Improve
-
-# Appendix A
-
-## 🧠 Gamma vs Epsilon — why we need BOTH
-
-### 🔑 One-line difference (lock this in)
-
-* **Gamma (γ)** decides **how rewards are judged** (learning)
-* **Epsilon (ε)** decides **how actions are chosen** (behavior)
-
-They never do the same job
-
-## 1️⃣ Gamma (γ): how the agent THINKS about rewards
-
-Gamma answers:
-
-👉 "When I update my memory… do I care about the future?"
-
-* **Low gamma**
-
-  * Only immediate reward matters
-  * "Did this move win now?"
-
-* **High gamma**
-
-  * Immediate reward + future rewards
-  * "Does this position lead to winning later?"
-
-⚠️ Gamma does **NOT** choose actions
-
-It only affects how numbers are written into the Q-table
-
-## 2️⃣ Epsilon (ε): how the agent ACTS
-
-Epsilon answers:
-
-👉 "Do I trust my knowledge or act randomly?"
-
-* **High epsilon**
-
-  * Ignore the Q-table
-  * Try random empty squares
-
-* **Low epsilon**
-
-  * Follow the highest Q-value
-  * Play the best-known move
-
-⚠️ Epsilon does **NOT** affect learning math
-
-It only affects what action is picked
-
-## 3️⃣ The missing mental model (VERY important)
-
-Every move has TWO separate steps:
-
-1. **Choose an action** → controlled by **epsilon**
-2. **Learn from the result** → controlled by **gamma**
-
-They happen at different times
-
-## 4️⃣ Why low gamma does NOT replace epsilon
-
-Key misunderstanding:
-
-> "Low gamma means short thinking, so I don't need exploration"
-
-Because:
-
-* Gamma does not choose actions
-* Without epsilon, the agent NEVER explores
-
-Example:
-
-* Agent wins once by playing center first
-* Q-table prefers center
-* Without epsilon → agent always picks center
-* Never learns better long-term patterns
-
-## 5️⃣ What breaks if one is missing
-
-### ❌ No epsilon
-
-* No exploration
-* Gets stuck in habits
-* Learns slowly or incorrectly
-
-### ❌ No gamma
-
-* No long-term planning
-* Strategy never stabilizes
-
-## 🔒 Final lock-in summary
-
-* **Gamma = how far into the future learning looks**
-* **Epsilon = whether the agent explores or exploits**
-* Low gamma ≠ safe choices
-* Low epsilon ≠ short-term thinking
-
-Both are required for learning to actually work
