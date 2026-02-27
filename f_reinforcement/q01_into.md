@@ -1,4 +1,4 @@
-# Reinforcement Learning (RL) — Rock 🟡 Paper 📄 Scissors ✂️
+# Reinforcement Learning (RL) — Tic Tac Toe ❌ ⭕
 
 # Introduction
 
@@ -15,13 +15,14 @@ Think about a kid learning a game:
 
 That kid is called the **agent**
 
-## 2️⃣ Our game: Rock Paper Scissors
+## 2️⃣ Our game: Tic Tac Toe
 
 The rules (simple life rules):
 
-* 🟡 Rock beats ✂️ Scissors
-* ✂️ Scissors beats 📄 Paper
-* 📄 Paper beats 🟡 Rock
+* 3x3 board
+* Two players: ❌ and ⭕
+* First to align 3 in a row (horizontal, vertical, diagonal) wins
+* If the board fills with no winner → Draw
 
 The agent plays against an opponent
 
@@ -31,14 +32,15 @@ The **agent** is the learner
 
 In our case:
 
-* The agent chooses one move: 🟡 / 📄 / ✂️
-* The environment answers with a result
+* The agent chooses one empty square
+* The environment updates the board and returns a result
 
 Possible results:
 
 * Win → good 😄
 * Lose → bad 😢
 * Draw → meh 😐
+* Or game continues
 
 ## 4️⃣ Rewards (how the agent feels)
 
@@ -47,6 +49,7 @@ We convert feelings into numbers (computers love numbers)
 * Win  → +1
 * Draw →  0
 * Lose → -1
+* Non-terminal move → 0
 
 This number is called the **reward**
 
@@ -56,29 +59,35 @@ Q-table = the agent's **cheat sheet / memory**
 
 It answers this question:
 
-👉 "If I am in this situation and I do this action, how good is it?"
+👉 "If I am in this board state and I place my mark in this square, how good is it?"
 
-For Rock Paper Scissors, the table is tiny
+For Tic Tac Toe, the table is larger than Rock Paper Scissors
 
-States = what happened last round
-Actions = what I choose now
+States = board configurations
+Actions = which empty square I choose
 
 Example (conceptual, not code):
 
-* Last round was a WIN
+Board state S:
 
-  * If I play 🟡 → value 0.2
-  * If I play 📄 → value 0.5
-  * If I play ✂️ → value 0.1
+❌ ⭕ ❌
+⭕ ❌ ⬜
+⬜ ⭕ ⬜
+
+Possible actions:
+
+* Place at (2,0) → value 0.4
+* Place at (2,2) → value 0.9
+* Place at (1,2) → value 0.1
 
 Higher number = better idea
 
 ## 6️⃣ How the Q-table is updated (baby steps)
 
-After each round:
+After each move:
 
 1. Agent picks an action
-2. Game gives a reward
+2. Game gives a reward (if terminal)
 3. Agent updates ONE number in the Q-table
 
 Simple idea:
@@ -101,13 +110,13 @@ Gamma answers:
 
 * Gamma close to 0
 
-  * I only care about this round
-  * YOLO mindset
+  * I only care about this move
+  * Greedy mindset
 
 * Gamma close to 1
 
   * I care about winning in the long run
-  * Chess brain 🧠
+  * Strategy brain 🧠
 
 Typical value: **0.9**
 
@@ -150,11 +159,11 @@ If score goes up over many games → 🎉 success
 
 1. Agent looks at Q-table
 2. Agent maybe explores (epsilon)
-3. Agent chooses 🟡 / 📄 / ✂️
-4. Game returns reward
+3. Agent chooses a square
+4. Game returns reward (if terminal)
 5. Q-table is updated
 6. Score is updated
-7. Repeat MANY times
+7. Repeat MANY games
 
 ## Final brain-friendly summary 🧠
 
@@ -170,7 +179,7 @@ Reinforcement Learning is literally:
 
 # Appendix A
 
-## 🧠 Gamma vs Epsilon — why we need BOTH 
+## 🧠 Gamma vs Epsilon — why we need BOTH
 
 ### 🔑 One-line difference (lock this in)
 
@@ -185,15 +194,15 @@ Gamma answers:
 
 👉 "When I update my memory… do I care about the future?"
 
-* **Low gamma (YOLO mindset)**
+* **Low gamma**
 
   * Only immediate reward matters
-  * "Did I win THIS round?"
+  * "Did this move win now?"
 
-* **High gamma (planner mindset)**
+* **High gamma**
 
   * Immediate reward + future rewards
-  * "Does this help me win MORE later?"
+  * "Does this position lead to winning later?"
 
 ⚠️ Gamma does **NOT** choose actions
 
@@ -208,7 +217,7 @@ Epsilon answers:
 * **High epsilon**
 
   * Ignore the Q-table
-  * Try random moves 🟡 📄 ✂️
+  * Try random empty squares
 
 * **Low epsilon**
 
@@ -221,7 +230,7 @@ It only affects what action is picked
 
 ## 3️⃣ The missing mental model (VERY important)
 
-Every round has TWO separate steps:
+Every move has TWO separate steps:
 
 1. **Choose an action** → controlled by **epsilon**
 2. **Learn from the result** → controlled by **gamma**
@@ -230,9 +239,9 @@ They happen at different times
 
 ## 4️⃣ Why low gamma does NOT replace epsilon
 
-This is the key misunderstanding:
+Key misunderstanding:
 
-> "Low gamma = YOLO, so why not just pick the safest option?"
+> "Low gamma means short thinking, so I don't need exploration"
 
 Because:
 
@@ -241,10 +250,10 @@ Because:
 
 Example:
 
-* Agent once wins with 🟡
-* Q-table slightly prefers 🟡
-* Without epsilon → agent plays 🟡 forever
-* Even if 📄 is better
+* Agent wins once by playing center first
+* Q-table prefers center
+* Without epsilon → agent always picks center
+* Never learns better long-term patterns
 
 ## 5️⃣ What breaks if one is missing
 
@@ -256,8 +265,7 @@ Example:
 
 ### ❌ No gamma
 
-* No long-term learning
-* Values stay noisy
+* No long-term planning
 * Strategy never stabilizes
 
 ## 🔒 Final lock-in summary
@@ -268,4 +276,3 @@ Example:
 * Low epsilon ≠ short-term thinking
 
 Both are required for learning to actually work
-
