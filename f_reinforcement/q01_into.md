@@ -70,9 +70,9 @@ Example (conceptual, not code):
 
 Board state S:
 
-❌ ⭕ ❌
-⭕ ❌ ⬜
-⬜ ⭕ ⬜
+❌ ⭕ ❌  
+⭕ ❌ ⬜  
+⬜ ⭕ ⬜  
 
 Possible actions:
 
@@ -82,11 +82,11 @@ Possible actions:
 
 Higher number = better idea
 
-simple example:
+Simple example (monte carlo score):
 
 <img src="qtable_ttt3.png" />
 
-## 6️⃣ How the Q-table is updated (baby steps)
+## 6️⃣ How the Q-table is updated - QLearning Score
 
 After each move:
 
