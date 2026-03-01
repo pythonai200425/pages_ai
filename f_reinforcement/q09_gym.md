@@ -1,5 +1,5 @@
 
-<img src="openai_gym.jpg" />
+<img src="images/openai_gym.jpg" />
 
 **How to Train an Agent**
 
