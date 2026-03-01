@@ -5,7 +5,7 @@
 
 # What is Gymnasium?
 
-Gymnasium is a standard API for Reinforcement Learning environments.
+Gymnasium is a standard API for Reinforcement Learning environments
 
 It defines a simple communication protocol between:
 
@@ -18,7 +18,7 @@ Agent chooses action → Environment responds with next state + reward
 
 # The Environment Structure
 
-Every Gym environment is a class that inherits from `gym.Env`.
+Every Gym environment is a class that inherits from `gym.Env`
 
 Minimal structure:
 
@@ -56,7 +56,7 @@ Now let's understand each part
 
 **action_space**
 
-Defines what actions the agent is allowed to take.
+Defines what actions the agent is allowed to take
 
 **spaces.Discrete(n)**
 
@@ -80,7 +80,7 @@ So:
 * Discrete(3) → actions: 0,1,2
 * Discrete(9) → actions: 0..8
 
-It represents a **finite set of separate choices**.
+It represents a **finite set of separate choices**
 
 Typical examples:
 
@@ -98,7 +98,7 @@ This randomly samples one valid integer action.
 
 **observation_space**
 
-Defines what the state looks like.
+Defines what the state looks like
 
 **spaces.Box(...)**
 
@@ -113,7 +113,7 @@ self.observation_space = spaces.Box(
 
 **Box** means:
 
-The state is a continuous numeric vector inside a range.
+The state is a continuous numeric vector inside a range
 
 Let’s break it down:
 
@@ -128,9 +128,9 @@ So this defines a state like:
 [0.2, 0.7, 0.0, 1.0]
 ```
 
-Each element must be between 0 and 1.
+Each element must be between 0 and 1
 
-Box represents a **continuous space**, not discrete choices.
+Box represents a **continuous space**, not discrete choices
 
 Typical examples:
 
@@ -156,8 +156,6 @@ Box is used for:
 * images
 
 ## reset function
-
-()
 
 Called at the start of every episode.
 
@@ -190,7 +188,7 @@ def reset(self, *, seed=None, options=None):
 
 ## step(action) function
 
-This is the most important function.
+This is the most important function
 
 Signature:
 
@@ -263,7 +261,7 @@ This structure is always the same.
 
 ## Training a Q-Learning Agent with Gym
 
-Now we plug Q-learning into the loop.
+Now we plug Q-learning into the loop
 
 Example (tabular Q-learning):
 
@@ -311,7 +309,7 @@ for episode in range(1000):
 
 Notice:
 
-Gym does NOT change Q-learning.
+Gym does NOT change Q-learning
 
 It only standardizes how:
 
@@ -333,4 +331,4 @@ The agent training loop always follows:
 
 reset → loop(step) → until terminated or truncated
 
-Once you understand that, any algorithm (Q-learning, DQN, PPO, etc.) fits inside this structure.
+Once you understand that, any algorithm (Q-learning, DQN, PPO, etc.) fits inside this structure
