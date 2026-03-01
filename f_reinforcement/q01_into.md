@@ -53,7 +53,7 @@ We convert feelings into numbers (computers love numbers)
 
 This number is called the **reward**
 
-<img src="ttt_game_flow.png" />
+<img src="images/ttt_game_flow.png" />
 
 ## 5️⃣ What is a Q-table? (the heart of RL)
 
@@ -87,7 +87,7 @@ Higher number = better idea
 ## 6️⃣ How the Q-table is updated 
 ## Monte Carlo
 
-<img src="qtable_ttt3.png" />
+<img src="images/qtable_ttt3.png" />
 
 ## QLearning Score
 
@@ -97,7 +97,7 @@ After each move:
 2. Game gives a reward (if terminal)
 3. Agent updates ONE number in the Q-table
 
-<img src="qtable_ttt5.png" />
+<img src="images/qtable_ttt5.png" />
 
 Simple idea:
 
