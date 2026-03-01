@@ -50,13 +50,15 @@ class MyEnv(gym.Env):
         ...
 ```
 
-Now let's understand each part.
+Now let's understand each part
 
-# 3) action_space
+## __init__
+
+**action_space**
 
 Defines what actions the agent is allowed to take.
 
-### spaces.Discrete(n)
+**spaces.Discrete(n)**
 
 ```python
 self.action_space = spaces.Discrete(3)
@@ -94,11 +96,11 @@ action = env.action_space.sample()
 
 This randomly samples one valid integer action.
 
-# 4) observation_space
+**observation_space**
 
 Defines what the state looks like.
 
-### spaces.Box(...)
+**spaces.Box(...)**
 
 ```python
 self.observation_space = spaces.Box(
@@ -153,7 +155,7 @@ Box is used for:
 * numeric vectors
 * images
 
-# 5) reset()
+## reset()
 
 ()
 
@@ -186,7 +188,7 @@ def reset(self, *, seed=None, options=None):
     return self.state, {}
 ```
 
-# 6) step(action)
+## step(action)
 
 This is the most important function.
 
@@ -234,7 +236,7 @@ def step(self, action):
     return self.state, reward, terminated, truncated, {}
 ```
 
-# 7) The Agent–Environment Interaction Loop
+## The Agent–Environment Interaction Loop
 
 This is the standard training loop skeleton:
 
@@ -259,7 +261,7 @@ for episode in range(1000):
 
 This structure is always the same.
 
-# 8) Training a Q-Learning Agent with Gym
+## Training a Q-Learning Agent with Gym
 
 Now we plug Q-learning into the loop.
 
@@ -318,7 +320,7 @@ It only standardizes how:
 * we detect episode termination
 
 
-# 9) Summary
+## Summary
 
 Gymnasium environments must define:
 
