@@ -84,11 +84,12 @@ Possible actions:
 
 Higher number = better idea
 
-Simple example (monte carlo score):
+## 6️⃣ How the Q-table is updated 
+## Monte Carlo
 
 <img src="qtable_ttt3.png" />
 
-## 6️⃣ How the Q-table is updated - QLearning Score
+## QLearning Score
 
 After each move:
 
