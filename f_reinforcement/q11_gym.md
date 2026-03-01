@@ -1,14 +1,7 @@
 
 <img src="openai_gym.jpg" />
 
-## How to Train an Agent
-
-This page explains:
-
-1. What Gymnasium is
-2. What functions exist inside an environment
-3. What each function receives and returns
-4. How to train an agent using Gym
+**How to Train an Agent**
 
 # 1) What is Gymnasium?
 
