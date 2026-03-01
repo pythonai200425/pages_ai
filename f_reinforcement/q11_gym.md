@@ -1,6 +1,6 @@
 # Gymnasium Explained: Environment Functions and How to Train an Agent
 
-<img src="openai_gym" />
+<img src="openai_gym.jpg" />
 
 This page explains:
 
