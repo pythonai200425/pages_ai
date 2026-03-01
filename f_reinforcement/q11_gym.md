@@ -3,7 +3,7 @@
 
 **How to Train an Agent**
 
-# 1) What is Gymnasium?
+# What is Gymnasium?
 
 Gymnasium is a standard API for Reinforcement Learning environments.
 
@@ -16,7 +16,7 @@ The interaction loop is always:
 
 Agent chooses action → Environment responds with next state + reward
 
-# 2) The Core Environment Structure
+# The Environment Structure
 
 Every Gym environment is a class that inherits from `gym.Env`.
 
