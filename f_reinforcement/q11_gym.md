@@ -1,13 +1,13 @@
 # Gymnasium Explained: Environment Functions and How to Train an Agent
 
+<img src="openai_gym" />
+
 This page explains:
 
 1. What Gymnasium is
 2. What functions exist inside an environment
 3. What each function receives and returns
 4. How to train an agent using Gym
-
----
 
 # 1) What is Gymnasium?
 
@@ -21,8 +21,6 @@ It defines a simple communication protocol between:
 The interaction loop is always:
 
 Agent chooses action → Environment responds with next state + reward
-
----
 
 # 2) The Core Environment Structure
 
@@ -59,8 +57,6 @@ class MyEnv(gym.Env):
 ```
 
 Now let's understand each part.
-
----
 
 # 3) action_space
 
@@ -104,8 +100,6 @@ action = env.action_space.sample()
 
 This randomly samples one valid integer action.
 
----
-
 # 4) observation_space
 
 Defines what the state looks like.
@@ -148,8 +142,6 @@ Typical examples:
 * Image pixels → Box
 * Sensor readings → Box
 
----
-
 ### Discrete vs Box (Core Difference)
 
 Discrete → one choice from fixed integers
@@ -166,8 +158,6 @@ Box is used for:
 * continuous values
 * numeric vectors
 * images
-
----
 
 # 5) reset()
 
@@ -201,8 +191,6 @@ def reset(self, *, seed=None, options=None):
     self.state = np.zeros(4)
     return self.state, {}
 ```
-
----
 
 # 6) step(action)
 
@@ -252,8 +240,6 @@ def step(self, action):
     return self.state, reward, terminated, truncated, {}
 ```
 
----
-
 # 7) The Agent–Environment Interaction Loop
 
 This is the standard training loop skeleton:
@@ -278,8 +264,6 @@ for episode in range(1000):
 ```
 
 This structure is always the same.
-
----
 
 # 8) Training a Q-Learning Agent with Gym
 
@@ -339,7 +323,6 @@ It only standardizes how:
 * we apply actions
 * we detect episode termination
 
----
 
 # 9) Summary
 
