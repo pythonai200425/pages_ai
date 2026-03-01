@@ -155,7 +155,7 @@ Box is used for:
 * numeric vectors
 * images
 
-## reset()
+## reset function
 
 ()
 
@@ -188,7 +188,7 @@ def reset(self, *, seed=None, options=None):
     return self.state, {}
 ```
 
-## step(action)
+## step(action) function
 
 This is the most important function.
 
