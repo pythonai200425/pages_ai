@@ -73,11 +73,6 @@ $$
 Score(negative) = P(negative) \cdot P(film | negative) \cdot P(actor | negative)
 $$
 
-מלא/י:
-
-- Score(positive) = (25/35) * (0.17) * (0.08) = ______
-- Score(negative) = (10/35) * (0.1) * (0.5) = ______
-
 ## שלב 5: החלטה
 
 - אם Score(positive) > Score(negative) => סיווג **Positive**
