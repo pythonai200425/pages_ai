@@ -70,7 +70,7 @@ doc = nlp("Apple is opening a new office in London for $5 million")
 - מזהה קיצורים כמו `U.S.` או `L.A.`
 - מפרידה סימני פיסוק בצורה חכמה
 
-## Lemmatization מול Stemming
+## ה- Lemmatization מול Stemming
 
 | נושא | Lemmatization | Stemming |
 |---|---|---|
@@ -115,7 +115,7 @@ doc = nlp("Apple is opening a new office in London for $5 million")
 
 ## שורת סיכום לבחינה
 
-> `spaCy` היא ספריית NLP שמבצעת עיבוד טקסט מלא: טוקניזציה, זיהוי חלקי דיבר, ניתוח תחבירי, זיהוי ישויות, למיטיזציה, חלוקה למשפטים וחילוץ ביטויים חשובים
+> ה- `spaCy` היא ספריית NLP שמבצעת עיבוד טקסט מלא: טוקניזציה, זיהוי חלקי דיבר, ניתוח תחבירי, זיהוי ישויות, למיטיזציה, חלוקה למשפטים וחילוץ ביטויים חשובים
 
 ## לזכור ב-10 שניות
 
