@@ -44,22 +44,22 @@ $$
 **שלב 1 – הצב בנוסחה:**
 
 $$
-P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)} = \frac{\_\_\_ \cdot \_\_\_}{\_\_\_}
+P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)} = \frac{\underline{\hspace{1cm}} \cdot \underline{\hspace{1cm}}}{\underline{\hspace{1cm}}}
 $$
 
 **שלב 2 – חשב את המונה:**
 
 $$
-P(B \mid A) \cdot P(A) = \_\_\_ \cdot \_\_\_ = \_\_\_
+P(B \mid A) \cdot P(A) = \underline{\hspace{1cm}} \cdot \underline{\hspace{1cm}} = \underline{\hspace{1cm}}
 $$
 
 **שלב 3 – חלק במכנה:**
 
 $$
-P(A \mid B) = \frac{\_\_\_}{\_\_\_} = \_\_\_
+P(A \mid B) = \frac{\underline{\hspace{1cm}}}{\underline{\hspace{1cm}}} = \underline{\hspace{1cm}}
 $$
 
-**תוצאה:** ההסתברות שהמטופל חולה כאשר הבדיקה חיובית היא **\_\_\_%**
+**תוצאה:** ההסתברות שהמטופל חולה כאשר הבדיקה חיובית היא **_____%**
 
 ---
 
